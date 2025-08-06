@@ -1,0 +1,253 @@
+body{
+    padding-top: 8.5vh;
+}
+
+.Navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 7px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding-top: 20vh; */
+    background-color: white;
+    /* Add background to prevent overlap */
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  border-radius:0px 0px 20px 20px ; */
+}
+
+.Navbar .logo {
+    width: 120px;
+    margin-left: 150px;
+}
+
+.Navbar-menu {
+    display: flex;
+    list-style: none;
+    gap: 49px;
+    color: #49557e;
+    font-size: 18px;
+    /* cursor:progress !important; */
+
+}
+
+
+
+.Navbar-menu li span:hover {
+    color: #49557e;
+    border-bottom: 2px solid #49557e;
+    /* cursor: pointer; */
+}
+
+.Navbar-menu li span::selection {
+    background-color: #49557e;
+    color: white;
+}
+
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-left: 0px;
+
+}
+
+.Navbar button {
+    background: transparent;
+    font-size: 16px;
+    color: #49557e;
+    padding: 10px 30px;
+    border-radius: 50px;
+    border: 1px solid rgb(205, 204, 204);
+    cursor: pointer;
+    transition: 0.3s;
+    margin-right: 170px
+}
+
+.Navbar button:hover {
+    background-color: #e99416;
+}
+
+.Navbar .active {
+    padding-bottom: 2px;
+    border-bottom: 2px solid #49557e;
+}
+
+.Navbar li {
+    cursor: pointer;
+}
+
+.navbar-search-icon {
+    position: relative;
+    margin-right: 10px;
+
+}
+
+.navbar-search-icon .dot {
+    position: absolute;
+    min-width: 10px;
+    min-height: 10px;
+    background-color: tomato;
+    border-radius: 5px;
+    top: -8px;
+    right: -8px;
+}
+
+@media(max-width:1050px) {
+    .Navbar .headerlogo {
+        width: 140px;
+    }
+
+    .Navbar-menu {
+        gap: 20px;
+        font-size: 17px;
+
+    }
+
+    .navbar-right {
+        gap: 30px;
+    }
+
+    .navbar-right img {
+        width: 22px;
+
+    }
+
+    .navbar-right button {
+        padding: 8px 25px;
+    }
+}
+
+
+@media(max-width:900px) {
+    .Navbar .headerlogo {
+        width: 140px;
+    }
+
+    .Navbar-menu {
+        gap: 15px;
+        font-size: 16px;
+
+    }
+
+    .navbar-right {
+        gap: 20px;
+    }
+
+    .navbar-right img {
+        width: 20px;
+
+    }
+
+    .navbar-right button {
+        padding: 7px 20px;
+        font-size: 15px;
+    }
+}
+
+
+@media(max-width:750px) {
+
+    .Navbar-menu {
+        display: none;
+
+    }
+
+}
+
+.navbar-search {
+    display: flex;
+    align-items: center;
+    /* margin-right: 100px; */
+
+
+}
+
+.navbar-search input {
+    padding: 8px 15px;
+    border: 1px solid #000000;
+    border-radius: 20px 0 0 20px;
+    outline: none;
+    /* width: 200px; */
+
+
+}
+
+.navbar-search button {
+    background: #ff6b6b;
+    border: none;
+    border-radius: 0 20px 20px 0;
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+/* .no-results {
+  text-align: center;
+  margin: 20px 0;
+  color: #666;
+} */
+
+.navbar-search {
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+}
+
+.navbar-search input {
+    padding: 8px 15px;
+    border: 1px solid #ddd;
+    border-radius: 20px 0 0 20px;
+    outline: none;
+
+}
+
+/* .navbar-search button {
+    background: #339b03;
+    border: none;
+    border-radius: 0 20px 20px 0;
+    padding: 8px 15px;
+    cursor: pointer;
+  } */
+
+/* .no-results {
+    text-align: center;
+    margin: 20px 0;
+    color: #666;
+  } */
+
+/* Add this new wrapper for input with icon */
+.search-input-wrapper {
+    position: relative;
+    /* width: 200px; */
+
+}
+
+.search-input-wrapper input {
+    width: 100%;
+    padding: 8px 25px 8px 45px;
+    /* left padding for icon */
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    outline: none;
+}
+
+.search-input-wrapper .search-icon {
+    position: absolute;
+    top: 50%;
+    left: 13px;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    pointer-events: none;
+}
+
+/* Remove extra navbar-search button style */
+.navbar-search button {
+    display: none;
+    /* hide external search button if using icon inside input */
+}
